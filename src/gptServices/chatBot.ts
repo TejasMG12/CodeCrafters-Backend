@@ -1,4 +1,4 @@
-import { OPENAI_KEY } from '@/config';
+import { OPENAI_KEY } from '../config';
 import { OpenAI } from 'openai';
 import { ChatCompletionCreateParamsNonStreaming, CreateChatCompletionRequestMessage } from 'openai/resources/chat';
 
