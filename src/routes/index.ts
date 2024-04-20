@@ -6,5 +6,6 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', healthCheck);
-router.get('/gpt',getChatResponse)
+    router.get('/gpt',getChatResponse)
+
 export default router;
