@@ -35,7 +35,7 @@ class ChatBot<T> {
       model: this.model,
       messages: req,
       temperature: 0.4,
-      max_tokens: 256,
+      max_tokens: 2048,
       top_p: 1,
       frequency_penalty: 0,
       presence_penalty: 0,

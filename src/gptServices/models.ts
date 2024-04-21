@@ -1,6 +1,11 @@
 import ChatBot from "./chatBot";
 
-export const getTopicsFromSinglePage = new ChatBot<string[]>(
+interface Topic {
+  topicTitle: string;
+  subTopics: string[];
+}
+
+export const getTopicsFromSinglePage = new ChatBot<Topic[]>(
     [
       {
         "role": "system",
