@@ -1,18 +1,22 @@
 
 import { PdfDocument } from "@ironsoftware/ironpdf";
 import { IronPdfGlobalConfig } from "@ironsoftware/ironpdf";
+import { PDF_READER } from "../config";
 
 export const  createPDFs = async(filePath:string):Promise<string[]> => {
     
-const IronPdfConfig = {
-    licenseKey: "IRONSUITE.AASHRAY.KATIYAR.MARGATI.COM.25954-CA13E48F74-BZRU2-4GKNQN5I4LQW-NXVNIKSKRPV4-5MTRPSALWW2I-IGPQFZBENPFO-23P4DSWG3SED-VPXM5OHE4FMO-LFW5QN-T24YUPTLOA6MUA-DEPLOYMENT.TRIAL-KIGR2F.TRIAL.EXPIRES.20.MAY.2024",
+try {const IronPdfConfig = {
+    licenseKey: PDF_READER
   };
   IronPdfGlobalConfig.setConfig(IronPdfConfig);
   
 const pdf = await PdfDocument.fromFile(filePath);
 const text = await pdf.extractText();
 const segments: string[] = splitTextIntoSegments(text);
-return segments;
+return segments;}
+catch {
+    throw new Error('Error while extracting text from PDF');
+}
 }
 
 const splitTextIntoSegments = (text: string, maxTokensPerSegment: number = 4000): string[] => {

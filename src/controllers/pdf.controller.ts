@@ -17,6 +17,7 @@ export const uploadFile = async(req:Request, res:any) => {
     responses.filter((response) => response.length > 0);
 
     res.status(200).json({responses});
+    
     data.map(async (segment) => {
       addVectorData(segment, await getVectorData(segment));
     });

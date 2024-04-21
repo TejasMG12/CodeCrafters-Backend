@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import http from 'http';
 import multer from 'multer';
-
+import cors from 'cors'; // Import cors package
 
 dotenv.config({ path: path.join(__dirname, '../.env') });
 import { handleError } from './helpers/error';
@@ -13,13 +13,15 @@ import httpLogger from './middlewares/httpLogger';
 import router from './routes/index';
 import { uploadFile } from './controllers/pdf.controller';
 
-
 const app: express.Application = express();
 
 app.use(httpLogger);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// Add CORS middleware
+app.use(cors());
 
 // Define storage for multer
 const storage = multer.diskStorage({
@@ -37,14 +39,10 @@ const upload = multer({ storage: storage });
 app.post('/upload', upload.single('file'), uploadFile);
 app.use('/', router);
 
-
-
 // catch 404 and forward to error handler
 app.use((_req, _res, next) => {
   next(createError(404));
 });
-
-
 
 // error handler
 const errorHandler: express.ErrorRequestHandler = (err, _req, res) => {
