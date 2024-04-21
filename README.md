@@ -25,7 +25,7 @@ A interactive platform to quickly give you lessons and quizes by simply uploadin
 - Tailwind CSS
 - OpenAI
 ### How to configure
-1. Clone both the [Backend]() and [Frontend]() repos.
+1. Clone both the [Backend](https://github.com/TejasMG12/CodeCrafters-Backend.git) and [Frontend](https://github.com/Aashray446/Code_Crafter_Frontend) repos.
 2. Run "npm install" on both the repo.
 
 ### How to Run
