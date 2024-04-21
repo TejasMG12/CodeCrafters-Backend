@@ -8,6 +8,6 @@ const router = express.Router();
 /* GET home page. */
 router.get('/', healthCheck);
     router.get('/gpt',getChatResponse)
-    router.get('/search',getQuestion)
+    router.get('/generateQuestion',getQuestion)
 
 export default router;
