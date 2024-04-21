@@ -1,34 +1,36 @@
-<h1 align="center">Nodejs-Express Typescript Boilerplate</h1>
+# Define24
 
-<p align="center">
-  <b>Build your web servers without spending hours on setting up the project.</b></br>
-  <sub>Made with ❤️ by <a href="https://github.com/abhijeetgurle">Abhijeet</a></sub>
-</p>
+![WhatsApp Image 2024-04-18 at 12 33 29_51d9e514](https://github.com/Definehack/Define24/assets/79042374/4d6c229a-5048-4ac9-bba6-c0e835e22097)
 
-<br>
+## CodeCrafters
 
-## Why I Have Created This?
+### Test Tame
+A interactive platform to quickly give you lessons and quizes by simply uploading the content you wish to learn
 
-There are many boilerplates available on the internet which providers a server app with nodejs, express & typescript but I found them either too complex for my use case or too simple where I need to configure lot of features later. So I build this repo to be used in projects which are simple & doesn't require lot of unnecessary tooling.
+### Team Members
+[Aashray Katiyar](https://github.com/Aashray446)   
+[Sneha Yadav](https://github.com/sneha_yadav390)   
+[Tejas Gampawar](https://github.com/TejasMG12)   
 
-<br>
+### Link to Project
+[Embed the live link of project](live_link)
 
-## Features
+### How it Works ?
+1. Upload the contents you wish to learn in pdf form and click submit.
+2. ByteQuiz will then give you series of points to summarize and explain the topics.
+3. Then the user goes through a quiz to test their understanding.
 
-- **Simple Code** with no unnecessary dependencies.
-- **JSON & Cookie** parsing support with no need of configurations.
-- **Environment variables** can be easily added in file `.env` using library like [dotenv](https://www.npmjs.com/package/dotenv).
-- **Logging** support using libraries like [winston](https://www.npmjs.com/package/winston) & [morgan](https://www.npmjs.com/package/morgan)
-- **Prettier & ESlint** added so that your code looks & feels consistent.
+### Technologies used
+- Node.js
+- Tailwind CSS
+- OpenAI
+### How to configure
+1. Clone both the [Backend]() and [Frontend]() repos.
+2. Run "npm install" on both the repo.
 
-<br>
+### How to Run
+1. Run "npm run dev" on both the repo to start the web app.
+2. Go to "http://<your_url>:3000".
 
-## How To Use It
-
-Download the zip file of this codebase & start writing your APIs 🎉.
-
-<br>
-
-## License
-
-[MIT](/LICENSE)
+<!-- ### Other Links -->
+<!-- -- -->
