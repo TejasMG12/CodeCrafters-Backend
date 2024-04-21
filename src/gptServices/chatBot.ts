@@ -29,8 +29,6 @@ class ChatBot<T> {
       content: prompt,
     });
 
-    console.log(req);
-
     const options: ChatCompletionCreateParamsNonStreaming = {
       model: this.model,
       messages: req,
@@ -48,10 +46,8 @@ class ChatBot<T> {
 
     if (response.choices[0].message.content) {
       try {
-        console.log(response.choices[0].message.content);
         return this.parser(response.choices[0].message.content) as T;
       } catch (e) {
-        console.log(e);
         return [] as unknown as T;
       }
     }
